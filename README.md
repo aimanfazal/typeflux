@@ -34,6 +34,16 @@ npm install
 npm run dev
 ```
 
+## Deployment
+
+The site is deployed automatically to GitHub Pages through [GitHub Actions](.github/workflows/deploy.yml).
+
+- Pushes to `main` trigger a production deployment.
+- Deployments can also be started manually from the workflow's **Run workflow** action.
+- GitHub Pages must use **GitHub Actions** as its deployment source.
+
+The production site is available at https://aimanfazal.github.io/typeflux/.
+
 ## Available Scripts
 
 | Command | Description |
