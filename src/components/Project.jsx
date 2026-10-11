@@ -231,7 +231,7 @@ const Project = () => {
         {/* If showing all, render all 4 cards in sequence */}
         {showAll ? (
           <div className="w-full space-y-12">
-            {projectsData.map((proj) => renderTriptych(proj))}
+            {projects.map((proj) => renderTriptych(proj))}
           </div>
         ) : (
           /* Otherwise render the featured project */
