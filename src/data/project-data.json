@@ -34,6 +34,6 @@
       "inDevelopment": false,
       "description": "Terraq is a satellite-powered agricultural analytics platform built with React, TypeScript, Mapbox, Google Earth Engine, and Gemini. It provides NDVI analysis, soil and climate data, land-use classification, satellite imagery, and AI-powered crop planning through an interactive map dashboard.",
       "github": "https://github.com/aimanfaizal/terraq",
-      "image": "../assets/p2.jpg"
+      "image": "../assets/p3.jpg"
     }
 ]
