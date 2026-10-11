@@ -3,6 +3,12 @@ import { FaPlay } from "react-icons/fa6";
 import { SiGithub } from 'react-icons/si';
 import projectsData from '../data/project-data.json';
 
+const projectImages = import.meta.glob('../assets/*.{jpg,jpeg,png,webp}', {
+    eager: true,
+    query: '?url',
+    import: 'default',
+});
+
 const Project = () => {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
     const [showAll, setShowAll] = useState(false);
@@ -10,7 +16,11 @@ const Project = () => {
     const cardRef = useRef(null);
     const touchStartX = useRef(null);
 
-    const project = projectsData[selectedProjectIndex];
+    const projects = projectsData.map((projectData) => ({
+        ...projectData,
+        image: projectImages[projectData.image] ?? projectData.image,
+    }));
+    const project = projects[selectedProjectIndex];
 
     const handleSwitchProject = (newIndex) => {
         setSelectedProjectIndex(newIndex);
