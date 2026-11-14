@@ -33,11 +33,6 @@ const Project = () => {
                 handleSwitchProject((selectedProjectIndex + 1) % projectsData.length);
             } else if (e.key === 'ArrowLeft') {
                 handleSwitchProject((selectedProjectIndex - 1 + projectsData.length) % projectsData.length);
-            } else if (['1', '2', '3', '4'].includes(e.key)) {
-                const idx = parseInt(e.key, 10) - 1;
-                if (idx < projectsData.length) {
-                    handleSwitchProject(idx);
-                }
             }
         };
 
@@ -259,45 +254,43 @@ const Project = () => {
             </div>
 
             {/* Keyboard Navigation Tip - hidden on touch devices */}
-            <p className="hidden sm:block font-mono-code text-[11px] text-zinc-600 tracking-wider text-center">
-              Tip: press{" "}
-              <kbd className="px-1.5 py-0.5 border border-zinc-800 rounded bg-zinc-950 text-zinc-400">
-                ←
-              </kbd>{" "}
-              <kbd className="px-1.5 py-0.5 border border-zinc-800 rounded bg-zinc-950 text-zinc-400">
-                →
-              </kbd>{" "}
-              or{" "}
-              <kbd className="px-1.5 py-0.5 border border-zinc-800 rounded bg-zinc-950 text-zinc-400">
-                1-4
-              </kbd>{" "}
-              to switch
-            </p>
-            {/* Swipe hint - visible only on mobile */}
-            <p className="sm:hidden font-mono-code text-[11px] text-zinc-600 tracking-wider text-center">
-              // swipe ← → to switch
-            </p>
+            <div className="mt-3">
+              <p className="hidden sm:block font-mono-code text-[11px] text-zinc-600 tracking-wider text-center">
+                Tip: Press{" "}
+                <kbd className="px-1.5 py-0.5 border border-zinc-800 rounded bg-zinc-950 text-zinc-400">
+                  ←
+                </kbd>{" "}
+                <kbd className="px-1.5 py-0.5 border border-zinc-800 rounded bg-zinc-950 text-zinc-400">
+                  →
+                </kbd>{" "}
+                to switch
+              </p>
+              {/* Swipe hint - visible only on mobile */}
+              <p className="sm:hidden font-mono-code text-[11px] text-zinc-600 tracking-wider text-center">
+                // swipe ← → to switch
+              </p>
+            </div>
+
+            {/* Bottom Actions: View All & GitHub Repositories Link */}
+            <div className="sm:mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-mono-code text-xs sm:text-sm text-zinc-400">
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="hover:text-white transition-colors cursor-pointer tracking-wider"
+              >
+                {showAll ? "Showcase" : "Explore"}
+              </button>
+              <span className="text-zinc-700">•</span>
+              <a
+                href="https://github.com/aimanfazal?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors group"
+              >
+                <span>Repositories</span>
+              </a>
+            </div>
           </div>
         )}
-
-        {/* Bottom Actions: View All & GitHub Repositories Link */}
-        <div className="mt-8 sm:mt-14 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-mono-code text-xs sm:text-sm text-zinc-400">
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="hover:text-white transition-colors cursor-pointer tracking-wider"
-          >
-            {showAll ? "Showcase" : "Explore"}
-          </button>
-          <span className="text-zinc-700">•</span>
-          <a
-            href="https://github.com/aimanfazal?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors group"
-          >
-            <span>Repositories</span>
-          </a>
-        </div>
       </div>
     );
 };
