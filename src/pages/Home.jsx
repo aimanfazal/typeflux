@@ -3,7 +3,7 @@ import { Mail, Sparkles, Music, Music2 } from 'lucide-react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import Nav from '../components/Nav';
 
-const homeAudio = '/home-audio.mp3';
+const homeAudio = `${import.meta.env.BASE_URL}home-audio.mp3`;
 
 const FONT_STYLES = [
     { id: 'rye', className: 'font-rye tracking-wide' },
@@ -80,14 +80,23 @@ const Home = () => {
         load();
     }, []);
 
-    // Sync audio element with isPlaying state
-    useEffect(() => {
+    const toggleAudio = async () => {
         const audio = audioRef.current;
         if (!audio) return;
-        isPlaying
-            ? audio.play().catch(() => setIsPlaying(false))
-            : audio.pause();
-    }, [isPlaying]);
+
+        if (audio.paused) {
+            try {
+                await audio.play();
+                setIsPlaying(true);
+            } catch (error) {
+                console.error('Unable to play background music.', error);
+                setIsPlaying(false);
+            }
+        } else {
+            audio.pause();
+            setIsPlaying(false);
+        }
+    };
 
     const handleGlobalClick = async () => {
         setIsBouncing(true);
@@ -148,7 +157,7 @@ const Home = () => {
                         <Mail size={17} />
                     </a>
                     <button
-                        onClick={() => setIsPlaying((p) => !p)}
+                        onClick={toggleAudio}
                         aria-label={isPlaying ? 'Pause music' : 'Play music'}
                         title={isPlaying ? 'Pause ambient music' : 'Play ambient music'}
                         className={`p-1 transition-colors cursor-pointer ${isPlaying ? 'text-white' : 'text-zinc-600 hover:text-zinc-300'}`}
