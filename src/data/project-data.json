@@ -7,33 +7,171 @@
       "FastAPI",
       "Grok",
       "NextJS",
-      "Python",
       "Supadata",
       "TypeScript"
     ],
     "version": "v1.1.0",
     "inDevelopment": true,
     "description": "DexterLens is a full-stack AI application that transforms YouTube videos into interactive, promptable knowledge. Instead of searching through an entire video manually, simply paste a YouTube video URL, get the transcript, combine it with your request, and generate responses.",
-    "github": "https://github.com/aimanfaizal/dexter-lens",
+    "github": "https://github.com/aimanfazal/dexter-lens",
     "demo": "https://dexter-lens.vercel.app/",
-    "image": "../assets/p1.jpg"
+    "image": "../assets/dexterlens.png"
   },
-    {
-      "id": 2,
-      "title": "Terraq",
-      "tagline": "Satellite-powered agricultural and land analytics platform",
-      "tags": [
-        "Gemini",
-        "Geospatial",
-        "Google Earth Engine",
-        "Mapbox",
-        "NDVI",
-        "Satellite Imagery"
-      ],
-      "version": "v1.0.0",
-      "inDevelopment": false,
-      "description": "Terraq is a satellite-powered agricultural analytics platform built with React, TypeScript, Mapbox, Google Earth Engine, and Gemini. It provides NDVI analysis, soil and climate data, land-use classification, satellite imagery, and AI-powered crop planning through an interactive map dashboard.",
-      "github": "https://github.com/aimanfaizal/terraq",
-      "image": "../assets/p3.jpg"
-    }
+  {
+    "id": 2,
+    "title": "Terraq",
+    "tagline": "Satellite-powered agricultural and land analytics platform",
+    "tags": [
+      "Gemini",
+      "Geospatial",
+      "Google Earth Engine",
+      "Mapbox",
+      "NDVI",
+      "Satellite Imagery",
+      "IBM SkillsBuild Program"
+    ],
+    "version": "v0.2.0",
+    "inDevelopment": false,
+    "description": "Terraq is a satellite-powered agricultural analytics platform built with React, TypeScript, Mapbox, Google Earth Engine, and Gemini. It provides NDVI analysis, soil and climate data, land-use classification, satellite imagery, and AI-powered crop planning through an interactive map dashboard.",
+    "github": "https://github.com/aimanfazal/terraq",
+    "image": "../assets/terraq.png"
+  },
+  {
+    "id": 3,
+    "title": "Dead Stock Dost",
+    "tagline": "A tiny local-first AI tool that helps small garment shops find and act on dead stock",
+    "tags": [
+      "Hacktoberfest",
+      "Inventory Management",
+      "Local AI",
+      "Ollama",
+      "Hacktoberfest DEV Challenge"
+    ],
+    "version": "v1.0.0",
+    "inDevelopment": false,
+    "description": "Dead Stock Dost is one of the five projects built for the Hacktoberfest Weekend Challenge: Build for a Friend.",
+    "github": "https://github.com/aimanfazal/dead-stock-dost",
+    "image": "../assets/dead-stock-dost.png"
+  },
+  {
+    "id": 4,
+    "title": "Flikcr.io",
+    "tagline": "A monorepo content intelligence dashboard for exploring movie and streaming data",
+    "tags": [
+      "Amazon Prime",
+      "Data Analytics",
+      "Disney Plus",
+      "Kaggle",
+      "Netflix",
+      "IBM SkillsBuild Program"
+    ],
+    "version": "v0.1.0",
+    "inDevelopment": false,
+    "description": "Flickr.io is a full-stack analytics dashboard for exploring Netflix, Prime Video, and Disney+ datasets, featuring interactive insights into ratings, genres, release trends, and content search. Built with Vue, FastAPI, SQLite, and Chart.js.",
+    "github": "https://github.com/aimanfazal/flickr.io",
+    "image": "../assets/flickr-io.png"
+  },
+  {
+    "id": 5,
+    "title": "Sloth Organizer",
+    "tagline": "Tidy your files. Keep them private.",
+    "tags": [
+      "AI",
+      "File Organizer",
+      "Local LLM",
+      "Python",
+      "File Management",
+      "Hacktoberfest DEV Challenge"
+    ],
+    "version": "v0.1.0",
+    "inDevelopment": true,
+    "description": "A local-first AI application that scans a messy folder, uses a locally-running open-weight model (via LM Studio) to propose an organization plan, and applies approved file moves/renames safely after human review.",
+    "github": "https://github.com/aimanfazal/sloth-organizer",
+    "image": "../assets/sloth-organizer.png"
+  },
+  {
+    "id": 6,
+    "title": "Photo Proof",
+    "tagline": "Find the photo you remember, not the filename you forgot.",
+    "tags": [
+      "AI",
+      "Tiger Data",
+      "Open Clip",
+      "Semantic Search",
+      "PG Vector",
+      "Hacktoberfest DEV Challenge"
+    ],
+    "version": "v0.1.0",
+    "inDevelopment": false,
+    "description": "PhotoProof is a local-first, AI-powered photo search application. Instead of browsing thousands of files or manually tagging images, describe what you're looking for in plain English — 'a dog running on the beach at sunset' — and PhotoProof retrieves visually relevant images from your library.",
+    "github": "https://github.com/aimanfazal/photo-proof",
+    "image": "../assets/photoproof.png"
+  },
+  {
+    "id": 7,
+    "title": "Pehsaan",
+    "tagline": "Your Network. Your Journey. Your Growth.",
+    "tags": [
+      "Social Networking",
+      "React",
+      "LinkedIn Clone",
+      "MySQL",
+      "DBMS Semester Project"
+    ],
+    "version": "v0.1.0",
+    "inDevelopment": false,
+    "description": "A full-stack LinkedIn-style social networking application built with MySQL, Node.js, Express, and React. Features JWT authentication, user profiles, education and employment history, skills, posts, feeds, connection requests, networking, and user search.",
+    "github": "https://github.com/aimanfazal/pehsaan",
+    "image": "../assets/pehsaan.png"
+  },
+  {
+    "id": 8,
+    "title": "DDT Database",
+    "tagline": "A relational database for tracking WWE wrestlers, brands, championships, title reigns, events, and matches.",
+    "tags": [
+      "Database",
+      "PostgreSQL",
+      "Queries",
+      "SQLite",
+      "CS50",
+      "Introduction to Databases"
+    ],
+    "version": "v0.1.0",
+    "inDevelopment": false,
+    "description": "A MySQL relational database for tracking WWE wrestlers, brands, championships, title reigns, events, and match results. Built as the final project for CS50's Introduction to Databases with SQL, focusing on database design, relationships, constraints, indexing, views, and SQL queries.",
+    "github": "https://github.com/aimanfazal/cs50-sql-final-project",
+    "image": "../assets/ddt-database.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Simon Says Game",
+    "tagline": "Follow the Colors. Beat Your Best.",
+    "tags": [
+      "Memory Game",
+      "UI Design",
+      "Color Flash"
+    ],
+    "version": "v0.2.0",
+    "inDevelopment": false,
+    "description": "A modern and visually appealing recreation of the classic Simon Says memory game that challenges players to remember and replicate an increasingly complex sequence of colored button flashes.",
+    "github": "https://github.com/aimanfazal/simon-says-game",
+    "demo": "https://aimanfazal.github.io/simon-says-game/",
+    "image": "../assets/simon-says.png"
+  },
+  {
+    "id": 10,
+    "title": "OpenCV Image Processing",
+    "tagline": "Collection of OpenCV-based image processing and computer vision projects built using Python.",
+    "tags": [
+      "Computer Vision",
+      "Face Detection",
+      "Haar Cascade",
+      "Numpy"
+    ],
+    "version": "v0.2.0",
+    "inDevelopment": false,
+    "description": "Computer vision and image processing projects built with OpenCV and Python, featuring image transformations, face detection, and face recognition.",
+    "github": "https://github.com/aimanfazal/opencv-image-processing",
+    "image": "../assets/opencv.png"
+  }
 ]
