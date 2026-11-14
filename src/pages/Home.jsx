@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { Mail, Sparkles, Music, Music2 } from 'lucide-react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
-import homeAudio from "../../public/home-audio.mp3";
 import Nav from '../components/Nav';
+
+const homeAudio = '/home-audio.mp3';
 
 const FONT_STYLES = [
     { id: 'rye', className: 'font-rye tracking-wide' },
