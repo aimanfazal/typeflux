@@ -214,7 +214,7 @@ const Project = () => {
           <div className="flex items-center gap-2">
             <span className="text-zinc-600">PROJECT</span>
             <span className="text-zinc-300 font-semibold">
-              0{selectedProjectIndex + 1} / 0{projectsData.length}
+              {selectedProjectIndex + 1} / {projectsData.length}
             </span>
             <span className="text-zinc-600 hidden sm:inline">•</span>
             <span className="text-zinc-400 hidden sm:inline">
