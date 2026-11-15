@@ -110,3 +110,19 @@ body::-webkit-scrollbar,
     scrollbar-width: none;  /* Firefox */
     -ms-overflow-style: none; /* IE/Edge */
 }
+
+/* Page fade transition */
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-transition {
+    animation: pageFadeIn 0.7s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
