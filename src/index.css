@@ -10,6 +10,17 @@ body {
     min-height: 100vh;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url('/bg-3.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
 .font-rye {
     font-family: 'Rye', serif;
 }

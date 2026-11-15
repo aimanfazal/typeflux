@@ -40,7 +40,7 @@ const techStack = [
 
 const About = () => {
     return (
-      <div className="relative min-h-screen bg-black text-white flex flex-col justify-between pt-3 pb-3 px-4 sm:pt-4 sm:pb-4 sm:px-10 md:pt-4 md:pb-5 md:px-12 overflow-x-hidden select-none hide-scrollbar">
+      <div className="relative min-h-screen text-white flex flex-col justify-between pt-3 pb-3 px-4 sm:pt-4 sm:pb-4 sm:px-10 md:pt-4 md:pb-5 md:px-12 overflow-x-hidden select-none hide-scrollbar">
         {/* Top Navigation */}
         <Nav />
 
@@ -48,7 +48,7 @@ const About = () => {
         <main className="w-full max-w-5xl mx-auto my-auto py-6 sm:py-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 items-stretch">
             {/* Left Column: Square Photo & Quick Profile Card */}
-            <div className="md:col-span-5 border border-zinc-900 bg-black p-6 sm:p-8 flex flex-col justify-between space-y-6">
+            <div className="md:col-span-5 border border-zinc-900 bg-black/70 backdrop-blur-sm p-6 sm:p-8 flex flex-col justify-between space-y-6">
               <div className="space-y-6">
                 {/* Square Profile Image with subtle framing */}
                 <div className="relative w-full aspect-square max-w-[280px] mx-auto overflow-hidden border border-zinc-800 bg-[#161616] p-2">
@@ -120,7 +120,7 @@ const About = () => {
             {/* Right Column: Bio & Tech Stack */}
             <div className="md:col-span-7 flex flex-col gap-4 sm:gap-6">
               {/* Bio Card */}
-              <div className="border border-zinc-900 bg-black p-6 sm:p-8 flex flex-col justify-start space-y-4">
+              <div className="border border-zinc-900 bg-black/70 backdrop-blur-sm p-6 sm:p-8 flex flex-col justify-start space-y-4">
                 <div className="flex items-center gap-2 text-zinc-500 font-mono-code text-xs">
                   <Terminal size={14} />
                   <span>// whoami</span>
@@ -164,7 +164,7 @@ const About = () => {
               </div>
 
               {/* Tech Stack Card */}
-              <div className="border border-zinc-900 bg-black p-6 sm:p-8 flex flex-col justify-start space-y-4">
+              <div className="border border-zinc-900 bg-black/70 backdrop-blur-sm p-6 sm:p-8 flex flex-col justify-start space-y-4">
                 <div className="flex items-center gap-2 text-zinc-500 font-mono-code text-xs">
                   <Code size={14} />
                   <span>// stack & tools</span>

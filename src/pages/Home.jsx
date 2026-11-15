@@ -4,6 +4,7 @@ import { SiGithub, SiLinkedin } from 'react-icons/si';
 import Nav from '../components/Nav';
 
 const homeAudio = `${import.meta.env.BASE_URL}home-audio.mp3`;
+const layoutVideo = `${import.meta.env.BASE_URL}layout.mp4`;
 
 const FONT_STYLES = [
     { id: 'rye', className: 'font-rye tracking-wide' },
@@ -117,8 +118,18 @@ const Home = () => {
     const activeFont = FONT_STYLES[currentFontIndex];
 
     return (
-        <div className="relative w-screen h-screen h-[100dvh] bg-black text-white flex flex-col justify-between pt-3 pb-3 px-4 sm:pt-4 sm:pb-4 sm:px-10 md:pt-4 md:pb-5 md:px-12 overflow-hidden select-none">
+        <div className="relative w-screen h-screen h-[100dvh] text-white flex flex-col justify-between pt-3 pb-3 px-4 sm:pt-4 sm:pb-4 sm:px-10 md:pt-4 md:pb-5 md:px-12 overflow-hidden select-none">
             <audio ref={audioRef} src={homeAudio} loop preload="auto" />
+
+            {/* Video overlay — visible only while music is playing */}
+            <video
+                src={layoutVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className={`pointer-events-none fixed inset-0 w-full h-full object-cover z-0 transition-opacity duration-700 ${isPlaying ? 'opacity-100' : 'opacity-0'}`}
+            />
 
             <Nav />
 

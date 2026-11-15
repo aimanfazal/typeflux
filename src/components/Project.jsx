@@ -87,7 +87,7 @@ const Project = () => {
         className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 w-full max-w-5xl mx-auto items-stretch"
       >
         {/* Left Card: Title, Version, Tagline & Tech Pills */}
-        <div className="border border-zinc-900 bg-black p-5 sm:p-6 md:p-8 flex flex-col justify-between min-h-[240px] sm:min-h-[280px] md:min-h-[350px]">
+        <div className="border border-zinc-900 bg-[#0a0a0a] p-5 sm:p-6 md:p-8 flex flex-col justify-between min-h-[240px] sm:min-h-[280px] md:min-h-[350px] z-10">
           <div className="space-y-4">
             <div className="flex items-center justify-between gap-2 flex-wrap">
               <h2 className="text-3xl sm:text-4xl text-white font-pixel font-normal tracking-wide">
@@ -132,7 +132,7 @@ const Project = () => {
           ref={proj.id === project.id ? cardRef : null}
           onMouseMove={proj.id === project.id ? handleMouseMove : undefined}
           onMouseLeave={proj.id === project.id ? handleMouseLeave : undefined}
-          className="border border-zinc-900 bg-black p-4 sm:p-6 md:p-8 flex items-center justify-center min-h-[260px] sm:min-h-[300px] md:min-h-[350px] relative overflow-hidden group"
+          className="border border-zinc-900 bg-[#0a0a0a] p-4 sm:p-6 md:p-8 flex items-center justify-center min-h-[260px] sm:min-h-[300px] md:min-h-[350px] relative overflow-hidden group"
         >
           <div
             style={
@@ -169,7 +169,7 @@ const Project = () => {
         </div>
 
         {/* Right Card: Full Description, GitHub & Live Links */}
-        <div className="border border-zinc-900 bg-black p-5 sm:p-6 md:p-8 flex flex-col justify-between min-h-[200px] sm:min-h-[260px] md:min-h-[350px]">
+        <div className="border border-zinc-900 bg-[#0a0a0a] p-5 sm:p-6 md:p-8 flex flex-col justify-between min-h-[200px] sm:min-h-[260px] md:min-h-[350px] z-10">
           <p className="text-zinc-400 text-sm leading-relaxed font-sans">
             {proj.description}
           </p>
@@ -245,7 +245,7 @@ const Project = () => {
                   className={`font-mono-code text-xs px-3 sm:px-4 py-1.5 border transition-all cursor-pointer ${
                     selectedProjectIndex === idx
                       ? "border-zinc-500 bg-zinc-900 text-white font-medium shadow-sm"
-                      : "border-zinc-900 bg-black text-zinc-500 hover:text-zinc-300 hover:border-zinc-800"
+                      : "border-zinc-900 bg-[#0a0a0a] text-zinc-500 hover:text-zinc-300 hover:border-zinc-800"
                   }`}
                 >
                   {p.title}
