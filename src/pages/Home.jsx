@@ -1,10 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Mail, Sparkles, Music, Music2 } from 'lucide-react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import Nav from '../components/Nav';
-
-const homeAudio = `${import.meta.env.BASE_URL}home-audio.mp3`;
-const layoutVideo = `${import.meta.env.BASE_URL}layout.mp4`;
+import { useAudio } from '../context/AudioContext';
 
 const FONT_STYLES = [
     { id: 'rye', className: 'font-rye tracking-wide' },
@@ -36,8 +34,7 @@ const Home = () => {
         return cached ? parseInt(cached, 10) : 1;
     });
     const [isBouncing, setIsBouncing] = useState(false);
-    const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef(null);
+    const { isPlaying, toggle } = useAudio();
 
     // Cycle through fonts every 200ms
     useEffect(() => {
@@ -81,28 +78,10 @@ const Home = () => {
         load();
     }, []);
 
-    const toggleAudio = async () => {
-        const audio = audioRef.current;
-        if (!audio) return;
-
-        if (audio.paused) {
-            try {
-                await audio.play();
-                setIsPlaying(true);
-            } catch (error) {
-                console.error('Unable to play background music.', error);
-                setIsPlaying(false);
-            }
-        } else {
-            audio.pause();
-            setIsPlaying(false);
-        }
-    };
-
     const handleGlobalClick = async () => {
         setIsBouncing(true);
         setTimeout(() => setIsBouncing(false), 150);
-        setClickCount((n) => n + 1); // optimistic update
+        setClickCount((n) => n + 1);
         try {
             const res = await fetch(`https://abacus.jasoncameron.dev/hit/${NAMESPACE}/clicks`);
             if (res.ok) {
@@ -119,18 +98,6 @@ const Home = () => {
 
     return (
         <div className="relative w-screen h-screen h-[100dvh] text-white flex flex-col justify-between pt-3 pb-3 px-4 sm:pt-4 sm:pb-4 sm:px-10 md:pt-4 md:pb-5 md:px-12 overflow-hidden select-none">
-            <audio ref={audioRef} src={homeAudio} loop preload="auto" />
-
-            {/* Video overlay — visible only while music is playing */}
-            <video
-                src={layoutVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className={`pointer-events-none fixed inset-0 w-full h-full object-cover z-0 transition-opacity duration-700 ${isPlaying ? 'opacity-100' : 'opacity-0'}`}
-            />
-
             <Nav />
 
             {/* Centre: cycling name + tagline */}
@@ -168,9 +135,9 @@ const Home = () => {
                         <Mail size={17} />
                     </a>
                     <button
-                        onClick={toggleAudio}
+                        onClick={toggle}
                         aria-label={isPlaying ? 'Pause music' : 'Play music'}
-                        title={isPlaying ? 'Pause ambient music' : 'Play ambient music'}
+                        title={isPlaying ? 'Pause ambient music [M]' : 'Play ambient music [M]'}
                         className={`p-1 transition-colors cursor-pointer ${isPlaying ? 'text-white' : 'text-zinc-600 hover:text-zinc-300'}`}
                     >
                         {isPlaying ? <Music size={16} className="animate-pulse" /> : <Music2 size={16} />}
