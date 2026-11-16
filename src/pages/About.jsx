@@ -3,20 +3,15 @@ import profilePic from '../assets/image.jpg';
 import resumePdf from '/resume.pdf';
 import { FaNode, FaReact, FaJava, FaFile, FaCoffee } from "react-icons/fa";
 import {
-    SiCss3,
-    SiExpress,
     SiFastapi,
-    SiHtml5,
     SiJavascript,
     SiTypescript,
-    SiMongodb,
-    SiPostman,
     SiPython,
-    SiRust,
     SiTailwindcss,
     SiGithub,
     SiLinkedin,
     SiLeetcode,
+    SiMysql,
 } from 'react-icons/si';
 import { ArrowUpRight, Code, Terminal, FileText, Download, Mail} from 'lucide-react';
 
@@ -28,14 +23,9 @@ const techStack = [
     { name: 'Java', icon: FaJava },
     { name: 'React', icon: FaReact },
     { name: 'Node.js', icon: FaNode },
-    { name: 'Express.js', icon: SiExpress },
-    { name: 'MongoDB', icon: SiMongodb },
-    { name: 'Rust', icon: SiRust },
     { name: 'Tailwind CSS', icon: SiTailwindcss },
-    { name: 'HTML5', icon: SiHtml5 },
-    { name: 'CSS3', icon: SiCss3 },
-    { name: 'Postman', icon: SiPostman },
-    { name: 'GitHub', icon: SiGithub }
+    { name: 'MySQL', icon: SiMysql},
+    { name: 'GitHub', icon: SiGithub },
 ];
 
 const About = () => {
