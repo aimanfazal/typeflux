@@ -22,27 +22,20 @@ body::before {
     z-index: -1;
 }
 
-.font-rye {
-    font-family: 'Rye', serif;
+/* Active cycling fonts for Home page */
+.font-bungee-shade {
+    font-family: 'Bungee Shade', cursive;
 }
 
-.font-handwriting {
-    font-family: 'Architects Daughter', 'Patrick Hand', cursive;
-}
-
-.font-pixel {
-    font-family: 'Pixelify Sans', monospace;
-}
-
-.font-silkscreen {
-    font-family: 'Silkscreen', monospace;
+.font-lovers-quarrel {
+    font-family: 'Lovers Quarrel', cursive;
 }
 
 .font-vt323 {
     font-family: 'VT323', monospace;
 }
 
-.font-glitch {
+.font-rubik-glitch {
     font-family: 'Rubik Glitch', system-ui;
 }
 
@@ -50,32 +43,69 @@ body::before {
     font-family: 'Monoton', cursive;
 }
 
-.font-press-start {
-    font-family: 'Press Start 2P', monospace;
+.font-permanent-marker {
+    font-family: 'Permanent Marker', cursive;
 }
 
-.font-gothic {
+.font-unifraktur-maguntia {
     font-family: 'UnifrakturMaguntia', cursive;
 }
 
-.font-major-mono {
-    font-family: 'Major Mono Display', monospace;
+.font-bangers {
+    font-family: 'Bangers', cursive;
 }
 
-.font-orbitron {
-    font-family: 'Orbitron', sans-serif;
+.font-jacquard-12 {
+    font-family: 'Jacquard 12', cursive;
 }
 
-.font-bungee {
-    font-family: 'Bungee', cursive;
+.font-lobster {
+    font-family: 'Lobster', cursive;
 }
 
-.font-cinzel {
-    font-family: 'Cinzel Decorative', serif;
+.font-creepster {
+    font-family: 'Creepster', cursive;
 }
 
-.font-dotgothic {
-    font-family: 'DotGothic16', monospace;
+.font-iceland {
+    font-family: 'Iceland', sans-serif;
+}
+
+.font-silkscreen {
+    font-family: 'Silkscreen', monospace;
+}
+
+.font-limelight {
+    font-family: 'Limelight', cursive;
+}
+
+.font-rubik-spray-paint {
+    font-family: 'Rubik Spray Paint', cursive;
+}
+
+.font-crimson-text {
+    font-family: 'Crimson Text', serif;
+}
+
+.font-cherry-bomb-one {
+    font-family: 'Cherry Bomb One', cursive;
+}
+
+.font-londrina-shadow {
+    font-family: 'Londrina Shadow', cursive;
+}
+
+.font-metal-mania {
+    font-family: 'Metal Mania', cursive;
+}
+
+.font-libre-barcode-39-text {
+    font-family: 'Libre Barcode 39 Text', cursive;
+}
+
+/* Site-wide fonts */
+.font-pixel {
+    font-family: 'Pixelify Sans', monospace;
 }
 
 .font-mono-code {
