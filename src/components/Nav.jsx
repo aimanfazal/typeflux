@@ -22,6 +22,13 @@ const Nav = () => {
                 </Link>
                 <span className="text-zinc-600 text-xs">•</span>
                 <Link
+                    to="/journey"
+                    className={`transition-colors duration-200 ${currentPath === '/journey' ? 'text-white font-medium' : 'text-zinc-400 hover:text-white'}`}
+                >
+                    journey
+                </Link>
+                <span className="text-zinc-600 text-xs">•</span>
+                <Link
                     to="/about"
                     className={`transition-colors duration-200 ${currentPath === '/about' ? 'text-white font-medium' : 'text-zinc-400 hover:text-white'}`}
                 >
